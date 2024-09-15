@@ -5,13 +5,14 @@
   <title>Deadshot.io Client</title>
   <script type="module" src="/src/main.js" defer></script>
   <script>
+    p = document.querySelector('#error'); 
     window.onload = function () {
       console.log("Window loaded, attempting to redirect...");
       try {
         window.location.href = "https://deadshot.io";
       } catch (error) {
         console.error("Error redirecting:", error);
-        document.body.innerHTML += "<p>Error loading game: " + error.message + "</p>";
+        p.innerText += "Error loading game: " + error.message;
       }
     }
   </script>
