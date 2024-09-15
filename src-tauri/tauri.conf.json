@@ -19,7 +19,7 @@
         "all": false,
         "request": true,
         "scope": ["https://deadshot.io/*"]
-      }
+	  }
     },
     "windows": [
       {

@@ -7,7 +7,7 @@ fn main() {
     tauri::Builder::default()
     .setup(|app| {
         let window = app.get_window("main").unwrap();
-        if let Err(e) = window.eval("window.location.replace('./index.html')") {
+        if let Err(e) = window.eval("window.location.replace('https://stardust.dev/play')") {
             eprintln!("Failed to load URL: {}", e);
         }
         Ok(())
