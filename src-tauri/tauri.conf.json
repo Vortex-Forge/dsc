@@ -14,17 +14,32 @@
       "shell": {
         "all": false,
         "open": true
+      },
+      "http": {
+        "all": false,
+        "request": true,
+        "scope": ["https://deadshot.io/*"]
       }
     },
     "windows": [
       {
-        "title": "dsc",
-        "width": 1200,
-        "height": 1200
+        "title": "Deadshot.io Client",
+        "width": 800,
+        "height": 600,
+        "url": "https://deadshot.io",
+        "fullscreen": false,
+        "resizable": true
       }
     ],
     "security": {
-      "csp": null
+      "csp": "default-src 'self' https://deadshot.io; script-src 'self' 'unsafe-inline' https://deadshot.io; style-src 'self' 'unsafe-inline' https://deadshot.io",
+      "dangerousRemoteDomainIpcAccess": [
+        {
+          "domain": "deadshot.io",
+          "windows": ["main"],
+          "enableTauriAPI": true
+        }
+      ]
     },
     "bundle": {
       "active": true,
